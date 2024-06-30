@@ -126,4 +126,12 @@ a {
         order: 1;
         margin-bottom: 50px;
     }
+    .second-container {
+        order: 2;
+    }
+
+    .second-img {
+        order: 1;
+        margin-bottom: 50px;
+    }
 }
