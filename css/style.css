@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bg: #F5F6F7;
+}
+body{
+    background-color: var(--bg);
+}
+.theme-card {
+    border: 3px solid #d0cfcf;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s;
+    padding-bottom:30px ;
+}
+.theme-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+.theme-card img {
+    width: 100%;
+    height: auto;
+}
+.theme-card button {
+    width: 100px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #3A7DF4;
+    font-weight: 500;
+}
+.btn-applied {
+    position: relative;
+}
+.btn-applied::after {
+    content: '✔';
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.btn{
+    transition: all 0.3s;
+    width: 120px;
+}
+.btn:hover{
+    box-shadow: 0 5px 20px rgba(27, 72, 255, 0.5);
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.diagram-image {
+    max-width: 100%;
+    height: auto;
+}
+input::placeholder{
+    color: rgb(193, 189, 189) !important;
+}
+a {
+    text-decoration: none !important;
+    color: white !important;
+}
+.btn-wrapper{
+    display: flex;
+    justify-content: end;
+    margin-bottom: 50px;
+}
+.btn{
+    transition: all 0.3s;
+    width: 120px;
+    margin-right: 20px;
+}
+.btn:hover{
+    box-shadow: 0 5px 20px rgba(27, 72, 255, 0.5);
+}
+.btn-back:hover{
+    box-shadow: 0 5px 20px rgba(0,0,0, 0.5);
+}
+.image-container img{
+    border-radius: 10px;
+}
+.container {
+    margin-top: 20px;
+}
+
+.form-container {
+    height: 80vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    max-width: 600px;
+}
+
+.preview-container {
+    margin-top: 20px;
+}
+
+.preview-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.preview-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.form-check-input {
+    margin-right: 5px;
+}
+@media only screen and (max-width: 768px) {
+    .form-container {
+        order: 2;
+    }
+
+    .preview-container {
+        order: 1;
+        margin-bottom: 50px;
+    }
+}

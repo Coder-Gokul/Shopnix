@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- Form Container -->
+            <div class="col-md-6 form-container">
+                <h3 style="font-weight:700;">Let's add your first product</h3>
+                <h4 class="mt-5">Basic Details</h4>
+                <form>
+                    <div class="mb-3">
+                        <label for="productName" class="form-label mt-3" style="font-weight:500;">Product Name</label>
+                        <input type="text" class="form-control" id="productName" placeholder="eg: anatomy book">
+                    </div>
+                    <div class="mb-3">
+                        <label for="productDescription" class="form-label mt-3" style="font-weight:500;">Product Description</label>
+                        <textarea class="form-control" id="productDescription" rows="3" placeholder="Input text"></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label for="productImage" class="form-label mt-3" style="font-weight:500;">Add Image(s)</label>
+                        <input type="file" class="form-control" id="productImage" accept="image/*">
+                    </div>
+                    <div class="mb-2 form-check">
+                        <input type="checkbox" class="form-check-input" id="skuCheckbox">
+                        <label class="form-check-label" for="skuCheckbox">This product has an SKU code</label>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="skuCode" placeholder="eg: PROD0001" disabled>
+                    </div>
+                    <div class="mb-5 form-check">
+                        <input type="checkbox" class="form-check-input" id="hsnCheckbox">
+                        <label class="form-check-label" for="hsnCheckbox">This product has an HSN/SAC code</label>
+                    </div>
+                    <hr style="border: 1px solid black;">
+                    <h3 class="mt-5">Pricing Details</h3>
+                    <div class="mb-3 form-check mt-5">
+                        <input type="checkbox" class="form-check-input" id="gstCheckbox">
+                        <label class="form-check-label" for="gstCheckbox">Price inclusive of GST</label>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="netPrice" class="form-label" style="font-weight:500;">Net Price</label>
+                            <input type="number" class="form-control" id="netPrice" placeholder="eg: 80">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="listPrice" class="form-label" style="font-weight:500;">List Price</label>
+                            <input type="number" class="form-control" id="listPrice" placeholder="eg: 100">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="discountPercentage" class="form-label" style="font-weight:500;">Discount Percentage</label>
+                            <input type="number" class="form-control" id="discountPercentage" placeholder="eg: 20">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="gstRate" class="form-label" style="font-weight:500;">GST Rate</label>
+                            <input type="number" class="form-control" id="gstRate" placeholder="eg: 18">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="shippingCharges" class="form-label" style="font-weight:500;">Shipping Charges (if any)</label>
+                            <input type="number" class="form-control" id="shippingCharges" placeholder="eg: 40">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="stockLevel" class="form-label" style="font-weight:500;">Stock Level</label>
+                            <input type="number" class="form-control" id="stockLevel" placeholder="eg: 110">
+                        </div>
+                    </div>
+                    <div class="btn-wrapper">
+                        <button type="button" class="btn btn-secondary btn-back mt-5"><a href="second.html">Back</a></button>
+                        <button type="button" class="btn btn-primary mt-5" id="nextButton"><a href="#">Next</a></button>
+                    </div>
+                </form>
+            </div>
+            <!-- Preview Container -->
+            <div class="col-md-6 preview-container">
+                <div class="preview-card" id="previewCard">
+                    <img src="https://via.placeholder.com/150" id="previewImage" alt="Product Image" class="mb-3">
+                    <h4 id="previewTitle" ><span style="color: rgb(193, 189, 189)">Product title</span></h4>
+                    <p id="previewDescription" ><span style="color: rgb(193, 189, 189)">Product description goes here.</span></p>
+                    <p><span id="originalPrice" style="color: rgb(193, 189, 189)"><del>RS 100</del></span> <span id="discountedPrice" style="color: rgb(193, 189, 189)">RS 90</span></p>
+                    <p id="finalPrice"><span style="color: rgb(193, 189, 189)">Final Price  (incl. shipping): RS 90</span></p> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
